@@ -6,12 +6,17 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Login from './Login.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     // errorElement:,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   }
 ]);
 
