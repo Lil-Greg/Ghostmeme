@@ -7,12 +7,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Login from './Login.tsx';
+import Top from './Top.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    // errorElement:,
   },
   {
     path: "/login",
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Top />
+    <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>
 );
-
