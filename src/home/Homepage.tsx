@@ -1,7 +1,7 @@
-import './App.css';
+import './Homepage.css';
 import { Container } from 'react-bootstrap';
 
-function App() {
+export default function Homepage() {
 
   return (
     <>
@@ -11,5 +11,3 @@ function App() {
     </>
   )
 }
-
-export default App

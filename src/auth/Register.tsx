@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-export default function register() {
+export default function Register() {
     const firstNameRef = useRef<HTMLInputElement>(null);
     const lastNameRef = useRef<HTMLInputElement>(null);
     const passWordRef = useRef<HTMLInputElement>(null);
