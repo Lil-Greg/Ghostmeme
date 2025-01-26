@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import {  Container, Row } from "react-bootstrap";
 
 export default function Register() {
     const emailRef = useRef<HTMLInputElement>(null);
@@ -11,7 +12,9 @@ export default function Register() {
     const firstNameRef = useRef<HTMLInputElement>(null);
     const lastNameRef = useRef<HTMLInputElement>(null);
     return (<>
-        <div className="col-md-6">
+    <Container>
+    <Row>
+    <div className="col-md-6">
             <label htmlFor="inputFirst" className="form-label" >First Name</label>
             <input type="text" autoCapitalize="on" className="form-control" id="inputFirst" ref={firstNameRef} required />
         </div>
@@ -19,29 +22,35 @@ export default function Register() {
             <label htmlFor="inputLast" className="form-label" >Last Name</label>
             <input type="text" autoCapitalize="on" className="form-control" id="inputLast" ref={lastNameRef} required />
         </div>
-        <div>
+      </Row>
+      <Row>
+        <div className="col-md-6">
             <label htmlFor="inputFirst" className="form-label" >Username</label>
             <input type="text" autoCapitalize="on" className="form-control" id="inputFirst" ref={usernameRef} required />
         </div>
-        <div>
+        <div className="col-md-6">
             <label htmlFor="inputFirst" className="form-label" >Password</label>
             <input type="text" autoCapitalize="on" className="form-control" id="inputFirst" ref={passwordRef} required />
         </div>
-        <div>
-            <label htmlFor="inputFirst" className="form-label" >Zipcode</label>
-            <input type="text" autoCapitalize="on" className="form-control" id="inputFirst" ref={zipRef} required />
-        </div>
-        <div>
-            <label htmlFor="inputFirst" className="form-label" >City</label>
-            <input type="text" autoCapitalize="on" className="form-control" id="inputFirst" ref={cityRef} required />
-        </div>
-        <div>
+        </Row>
+        <Row>
+        <div className="col-md-10">
             <label htmlFor="inputFirst" className="form-label" >Email</label>
             <input type="text" autoCapitalize="on" className="form-control" id="inputFirst" ref={emailRef} required />
         </div>
-        <div>
+        <div className="col-md-10">
             <label htmlFor="inputFirst" className="form-label" >Address</label>
             <input type="text" autoCapitalize="on" className="form-control" id="inputFirst" ref={addressRef} required />
+        </div>
+        </Row>
+        <Row>
+        <div className="col-md-4">
+            <label htmlFor="inputFirst" className="form-label" >Zipcode</label>
+            <input type="text" autoCapitalize="on" className="form-control" id="inputFirst" ref={zipRef} required />
+        </div>
+        <div className="col-md-6">
+            <label htmlFor="inputFirst" className="form-label" >City</label>
+            <input type="text" autoCapitalize="on" className="form-control" id="inputFirst" ref={cityRef} required />
         </div>
         <div className="col-md-4">
             <label htmlFor="inputState" className="form-label">State</label>
@@ -100,6 +109,10 @@ export default function Register() {
                 <option value="WY">Wyoming</option>
             </select>
         </div>
+        </Row>
+        
+    
+    </Container>
 
     </>
     )
